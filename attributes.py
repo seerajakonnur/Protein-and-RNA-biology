@@ -1,8 +1,4 @@
-import re
 import array
-import sys
-import os
-import operator
 import pandas as pd
 import numpy as np
 from pandas import read_csv
@@ -10,10 +6,11 @@ import csv
 import statistics
 import modlamp
 from modlamp.descriptors import PeptideDescriptor, GlobalDescriptor
-data=pd.read_csv("nef_pred_motifs.csv")
+# Reading the csv file and saving in data
+data=pd.read_csv("motifs.csv")
+# Saving it into multidimesional array
 arr_motifs=data.values
-#arr_motifs=arr[:,4]
-#print(arr_motifs)
+# Defining arrays
 arr_len=[]
 motif=[]
 ch=[]
